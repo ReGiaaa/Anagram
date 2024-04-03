@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anagram </title>
+	</head>
+	<body>
+
+	<script>
+	function anagram(input1, input2){
+	input1 = input1.toLowerCase();
+   	input2 = input2.toLowerCase();
+
+
+	if (input1.length !== input2.length) {
+        return false;
+    	}
+
+    	var sortedinput1 = input1.split('').sort().join('');
+    	var sortedinput2 = input2.split('').sort().join('');
+
+    	if (sortedinput1 === sortedinput2) {
+        return true;
+    	} else {
+        return false;
+    }
+}
+	const wordOne = prompt("Enter the first word: ");
+	const wordTwo = prompt("Enter the second word: ");
+
+	if (anagram(wordOne, wordTwo)) {
+	alert(wordOne + " matches with " + wordTwo);
+	 } else {
+	    alert(wordOne + " does not match with " + wordTwo);
+	}
+	 
+	</script>
+	</body>
+</html>
